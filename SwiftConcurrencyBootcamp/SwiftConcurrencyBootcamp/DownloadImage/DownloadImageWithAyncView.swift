@@ -34,7 +34,7 @@ class DownloadImageWithAyncViewModel: ObservableObject {
     
     func fetchImageAsync() async {
         do {
-            let downloadImage = try await dataManager.downloadImageAsync(url: "hsttps://picsum.photos/200")
+            let downloadImage = try await dataManager.downloadImageAsync(url: "https://picsum.photos/200")
             await MainActor.run {
                 self.image = downloadImage
             }
